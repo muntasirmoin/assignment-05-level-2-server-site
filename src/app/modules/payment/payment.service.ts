@@ -23,7 +23,7 @@ const confirmationService = async (transactionId: string, status: string) => {
 
   // payment confirmation page come here
 
-  const filePath = join(__dirname, "../../../views/confirmation.html");
+  const filePath = join(__dirname, "../../../../public/confirmation.html");
 
   let template = readFileSync(filePath, "utf-8");
 

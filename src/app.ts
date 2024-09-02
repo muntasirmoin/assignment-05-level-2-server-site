@@ -7,16 +7,22 @@ import cookieParser from "cookie-parser";
 import router from "./app/router";
 import globalErrorHandler from "./app/middlewares/globalErrorHandler";
 import notFoundRoute from "./app/middlewares/notFoundRoute";
+import path from "path";
 
 const app: Application = express();
 // const port = 3000
-
+app.use(express.static(path.join(__dirname, "public")));
 // parser
 app.use(express.json());
 app.use(cookieParser());
 // check
 // app.use(cors({ origin: ["http://localhost:5174"] })); //check
-app.use(cors({ origin: ["http://localhost:5174"], credentials: true }));
+app.use(
+  cors({
+    origin: ["https://wheels-wash-client-assignment-5.vercel.app"],
+    credentials: true,
+  })
+);
 // app.use(cors());
 
 // application route

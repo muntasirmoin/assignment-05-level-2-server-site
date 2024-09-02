@@ -4,18 +4,18 @@
 
 ## Live URL
 
-1. `Live Deployment Link (Client):`
-2. `Live Deployment Link (Server): `
+1. `Live Deployment Link (Client):` wheels-wash-client-assignment-5.vercel.app
+2. `Live Deployment Link (Server):` assignment-3-plum-five.vercel.app
 3. `GitHub Repository Client :` https://github.com/muntasirmoin/assignment-05-level-2-client-site.git
 4. `GitHub Repository Server :` https://github.com/muntasirmoin/assignment-05-level-2-server-site.git
-5. `Project Overview Video :`
+5. `Project Overview Video :` https://drive.google.com/file/d/1ibB7juaQTvYBrurYKNwF_AcedQ4nUnik/view?usp=sharing
 
-## User Login
+## User Login credentials
 
 - email: user@gmail.com
 - password: user
 
-## Admin Login
+## Admin Login credentials
 
 - email: admin@gmail.com
 - password: admin
