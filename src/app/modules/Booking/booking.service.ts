@@ -1,11 +1,29 @@
 import { Document } from "mongoose";
 import { TBooking } from "./booking.interface";
 import { bookingModel } from "./booking.model";
+import { initiatePayment } from "../payment/payment.utils";
 
 const createBookingIntoDB = async (payload: TBooking) => {
   const result = await bookingModel.create(payload);
+  //
+  const populatedResult = await bookingModel
+    .findById(result._id)
+    .populate({
+      path: "customer",
+      select: "-password -role -createdAt -updatedAt", // Exclude the specified fields
+    })
+    .populate({
+      path: "serviceId",
+      select: "-createdAt -updatedAt", // Exclude the specified fields
+    });
 
-  return result;
+  //
+  const paymentSession = await initiatePayment(populatedResult);
+
+  console.log("paymentSession ", paymentSession);
+
+  // return paymentSession;
+  return populatedResult;
 };
 
 const getAllBookingFromDb = async () => {

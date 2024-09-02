@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Confirmation</title>
+    <!-- Link to Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMMZAxKP3LkgWVq7KA4Rjf9my5TWT5TMho47TE"
+      crossorigin="anonymous"
+    />
+    <!-- Basic styling -->
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f3f4f6;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .payment-confirmation {
+        text-align: center;
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        max-width: 500px;
+        width: 100%;
+      }
+      .payment-confirmation h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #28a745;
+      }
+      .payment-confirmation p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #555;
+        line-height: 1.6;
+      }
+      .payment-confirmation i {
+        font-size: 60px;
+        color: #28a745; /* Green color for success */
+        margin-bottom: 20px;
+      }
+      .payment-confirmation .home-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #ffffff;
+        background-color: #28a745;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+      .payment-confirmation .home-button:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="payment-confirmation">
+      <!-- Success Icon -->
+      <i class="fas fa-check-circle"></i>
+      <h1>{{message}}</h1>
+      <p>
+        We’re so happy that you’ve decided to continue your Vehicle service with
+        us. Our team is honored that we were able to Do this work and we
+        couldn’t be more excited to continue this journey with you.
+      </p>
+      <a href="http://localhost:5174/" class="home-button">Go to Home Page</a>
+    </div>
+  </body>
+</html>

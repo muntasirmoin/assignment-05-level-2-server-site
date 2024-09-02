@@ -9,6 +9,7 @@ import sendResponseToken from "../../utils/semResponseToken";
 import jwt, { JwtPayload } from "jsonwebtoken";
 import config from "../../config";
 import { TBooking } from "./booking.interface";
+import { initiatePayment } from "../payment/payment.utils";
 
 const createBooking = catchAsync(async (req, res) => {
   const bookingData = req.body;
@@ -57,7 +58,7 @@ const createBooking = catchAsync(async (req, res) => {
     payload
   );
   const responseResult = await bookingModel
-    .findById(result._id)
+    .findById(result?._id)
     .populate({
       path: "customer",
       select: "-password -role -createdAt -updatedAt", // Exclude the password field
@@ -76,11 +77,16 @@ const createBooking = catchAsync(async (req, res) => {
   //   .findOne(result._id)
   //   .select("-password -__v");
 
+  const paymentSession = await initiatePayment(responseResult);
+
+  console.log("paymentSession ", paymentSession);
+
   sendResponse(res, {
     statusCode: 200,
     success: true,
     message: "Booking successful",
-    data: responseResult,
+    // data: responseResult,
+    data: paymentSession,
   });
 });
 
@@ -181,29 +187,48 @@ const getUpcomingBookingsByUserIdController = async (
   res: Response
 ) => {
   try {
+    // Extract customerId from request parameters
     const { customerId } = req.params;
 
+    // Check if customerId is provided
     if (!customerId) {
       return res
         .status(400)
         .json({ success: false, message: "User ID is required" });
     }
 
+    // Find bookings associated with the customer and populate slotId with relevant fields
     const bookings: TBooking[] = await bookingModel
       .find({ customer: customerId })
-      .populate("slotId", "date startTime endTime")
+      .populate({
+        path: "slotId", // Populate the slotId field
+        select: "date startTime endTime", // Select only necessary fields
+      })
       .exec();
 
+    // Get the current date and create a new Date object representing the start of the current day
     const now = new Date();
-    const startOfDay = new Date(now.setHours(0, 0, 0, 0));
+    const startOfDay = new Date(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate()
+    );
 
+    // Filter bookings to include only those with a slotId.date that is today or in the future
     const upcomingBookings = bookings.filter((booking) => {
-      const bookingDate = new Date(booking.slotId.date);
-      return bookingDate >= startOfDay;
+      if (booking.slotId && booking.slotId.date) {
+        // Parse the date from slotId and compare with the start of the day
+        const bookingDate = new Date(booking.slotId.date);
+        return bookingDate >= startOfDay;
+      }
+      // Exclude bookings where slotId or slotId.date is not present
+      return false;
     });
 
+    // Return a successful response with the filtered upcoming bookings
     res.status(200).json({ success: true, data: upcomingBookings });
   } catch (error) {
+    // Log the error and return a failed response
     console.error("Error retrieving upcoming bookings:", error);
     res.status(500).json({
       success: false,
@@ -211,37 +236,50 @@ const getUpcomingBookingsByUserIdController = async (
     });
   }
 };
+
 //
 const getPastBookingsByUserIdController = async (
   req: Request,
   res: Response
 ) => {
   try {
+    // Extract customerId from request parameters
     const { customerId } = req.params;
 
+    // Check if customerId is provided
     if (!customerId) {
       return res
         .status(400)
         .json({ success: false, message: "User ID is required" });
     }
 
+    // Find bookings associated with the customer and populate related fields
     const bookings: TBooking[] = await bookingModel
       .find({ customer: customerId })
-      .populate("slotId", "date startTime endTime")
-      .populate("customer")
-      .populate("serviceId")
+      .populate("slotId", "date startTime endTime") // Populate slotId with necessary fields
+      .populate("customer") // Optionally populate customer details
+      .populate("serviceId") // Optionally populate service details
       .exec();
 
+    // Get the current date and create a new Date object representing the start of the current day
     const now = new Date();
     const startOfDay = new Date(now.setHours(0, 0, 0, 0));
 
+    // Filter bookings to include only those with a slotId.date that is before today
     const pastBookings = bookings.filter((booking) => {
-      const bookingDate = new Date(booking.slotId.date);
-      return bookingDate < startOfDay;
+      if (booking.slotId && booking.slotId.date) {
+        // Parse the date from slotId and compare with the start of the day
+        const bookingDate = new Date(booking.slotId.date);
+        return bookingDate < startOfDay;
+      }
+      // Exclude bookings where slotId or slotId.date is not present
+      return false;
     });
 
+    // Return a successful response with the filtered past bookings
     res.status(200).json({ success: true, data: pastBookings });
   } catch (error) {
+    // Log the error and return a failed response
     console.error("Error retrieving past bookings:", error);
     res.status(500).json({
       success: false,
