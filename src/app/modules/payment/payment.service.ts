@@ -16,9 +16,9 @@ const confirmationService = async (transactionId: string, status: string) => {
     //   }
     // );
 
-    message = "Successfully Paid";
+    message = "Payment Successfully!";
   } else {
-    message = "Payment Failed";
+    message = "Payment Failed! Try Again!";
   }
 
   // payment confirmation page come here

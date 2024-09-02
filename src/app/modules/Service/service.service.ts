@@ -30,11 +30,13 @@ const updateServiceFromDb = async (
   const modifiedUpdateData: Record<string, unknown> = {
     ...payload,
   };
-
+  console.log("modifiedUpdateData", modifiedUpdateData);
   const result = await serviceModel.findByIdAndUpdate(id, modifiedUpdateData, {
     new: true,
     runValidators: true,
   });
+
+  console.log(result);
 
   return result;
 };

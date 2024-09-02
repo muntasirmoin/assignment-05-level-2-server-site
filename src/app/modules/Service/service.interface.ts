@@ -4,6 +4,7 @@ export interface TService {
   price: number;
   duration: number;
   isDeleted: boolean;
+  image?: string;
 }
 
 export interface TUpdateService {
@@ -12,4 +13,5 @@ export interface TUpdateService {
   price?: number;
   duration?: number;
   isDeleted?: boolean;
+  image?: string;
 }

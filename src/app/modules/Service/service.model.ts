@@ -23,6 +23,10 @@ const serviceSchema = new Schema<TService>(
       type: Boolean,
       required: true,
     },
+    image: {
+      type: String, // Image URL should be a string
+      required: false, // Optional, as some services may not have an image
+    },
   },
   {
     timestamps: true,
