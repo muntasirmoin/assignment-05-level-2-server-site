@@ -51,9 +51,15 @@ We envision Wheels Wash as a leader in the vehicle service and wash industry, re
 13. Get Upcoming slot!
 14. Get Past Slot!
 
-## How to set up and use the application locally.
+### Installation Steps [How to set up and use the application locally.]
 
-### - Clone the github repository
+1. Step-by-step instructions on how to install the project.
+
+- clone client site
+- Clone server site
+- Open the code On VS code
+- To run client site cmd : npm run dev
+- To run server site cmd : npm run start:dev
 
 ### - Install dependency
 
@@ -71,16 +77,6 @@ We envision Wheels Wash as a leader in the vehicle service and wash industry, re
 - zod
 
 ### - Install devDependencies (if required)
-
-### Installation Steps
-
-1. Step-by-step instructions on how to install the project.
-
-- clone client site
-- Clone server site
-- Open the code On VS code
-- To run client site cmd : npm run dev
-- To run server site cmd : npm run start:dev
 
 ### Configuration
 
