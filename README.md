@@ -2,18 +2,20 @@
 
 ## Live URL
 
-1. Live Deployment Link (Server): assignment-3-plum-five.vercel.app
-2. GitHub Repository : https://github.com/muntasirmoin/assignment-3-level2-
-3. Project Overview Video : https://drive.google.com/file/d/133oM2_A5XCttBhXD5bUhiw2G5iLWNai1/view?usp=sharing
+1. Live Deployment Link (Client):
+2. Live Deployment Link (Server):
+3. GitHub Repository Client :
+4. GitHub Repository Server :
+5. Project Overview Video :
 
 ## User Login
 
-- email: sakif@gmail.com
-- password: admin
+- email: user@gmail.com
+- password: user
 
 ## Admin Login
 
-- email: muntasir@gmail.com
+- email: admin@gmail.com
 - password: admin
 
 ## Features:
