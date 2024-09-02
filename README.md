@@ -1,4 +1,6 @@
-# Car Wash Booking System
+<div align="center">
+  <h1>Wheels Wash</h1>
+</div>
 
 ## Live URL
 
