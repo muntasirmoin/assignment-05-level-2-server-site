@@ -72,11 +72,26 @@ We envision Wheels Wash as a leader in the vehicle service and wash industry, re
 
 ### - Install devDependencies (if required)
 
-### SetUp database / Live Deployment Link (Server).
+### Installation Steps
 
-### - Start server with command
+1. Step-by-step instructions on how to install the project.
 
-1.  npm run start:dev
-2.  Check package.json--> "scripts" for more required command
+- clone client site
+- Clone server site
+- Open the code On VS code
+- To run client site cmd : npm run dev
+- To run server site cmd : npm run start:dev
 
-### - server's root path: http://localhost:5000/
+### Configuration
+
+1. Create a `.env` file in the root directory of the project.
+2. Add necessary configuration variables in the `.env` file.
+   Example:
+
+   ```bash
+    PORT=5000
+    DB_URL=your_db_connection_uri
+
+   ```
+
+   3. server's root path: http://localhost:5000/
