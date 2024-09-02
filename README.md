@@ -4,11 +4,11 @@
 
 ## Live URL
 
-1. `Live Deployment Link (Client): [ ] `
-2. `Live Deployment Link (Server): [ ] `
-3. `GitHub Repository Client :[ https://github.com/muntasirmoin/assignment-05-level-2-client-site.git ] `
-4. `GitHub Repository Server :[ https://github.com/muntasirmoin/assignment-05-level-2-server-site.git ] `
-5. `Project Overview Video :[ ] `
+1. `Live Deployment Link (Client):`
+2. `Live Deployment Link (Server): `
+3. `GitHub Repository Client :` https://github.com/muntasirmoin/assignment-05-level-2-client-site.git
+4. `GitHub Repository Server :` https://github.com/muntasirmoin/assignment-05-level-2-server-site.git
+5. `Project Overview Video :`
 
 ## User Login
 
