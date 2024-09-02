@@ -91,7 +91,12 @@ We envision Wheels Wash as a leader in the vehicle service and wash industry, re
    ```bash
     PORT=5000
     DB_URL=your_db_connection_uri
+    STORE_ID="###"
+     <!-- Payment https://www.aamarpay.com/ -->
+    SIGNATURE_KEY="#########"
+    PAYMENT_URL="####"
+    PAYMENT_VERIFY_URL="####"
 
    ```
 
-   3. server's root path: http://localhost:5000/
+3. server's root path: http://localhost:5000/
