@@ -28,6 +28,12 @@ Our team of experienced professionals is dedicated to delivering exceptional ser
 
 At Wheels Wash, we pride ourselves on our commitment to customer satisfaction. We go the extra mile to make sure our customers leave with a smile, knowing their vehicle has been expertly serviced and cleaned.
 
+## Project Description
+
+Our mission at Wheels Wash is to provide reliable and high-quality vehicle service and wash solutions that enhance the longevity and appearance of your vehicle. We are dedicated to delivering services that exceed customer expectations, making us the preferred choice for vehicle owners.
+
+We envision Wheels Wash as a leader in the vehicle service and wash industry, recognized for our innovation, customer-centric approach, and commitment to excellence. Our goal is to set the standard for quality in vehicle care, helping our customers maintain their vehicles in top condition.
+
 ## Features:
 
 1. User Registration(signUp):
