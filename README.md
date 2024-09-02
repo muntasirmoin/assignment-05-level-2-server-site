@@ -20,6 +20,14 @@
 - email: admin@gmail.com
 - password: admin
 
+## Introduction
+
+Welcome to Wheels Wash! We are your trusted partner for comprehensive vehicle service and wash solutions. At Wheels Wash, we understand the importance of maintaining your vehicle's cleanliness and performance. Our goal is to provide top-quality services that keep your vehicle in pristine condition.
+
+Our team of experienced professionals is dedicated to delivering exceptional service. Whether you're looking for a quick wash or a complete service package, we offer a range of options to meet your needs. We use the latest technology and eco-friendly products to ensure your vehicle gets the care it deserves.
+
+At Wheels Wash, we pride ourselves on our commitment to customer satisfaction. We go the extra mile to make sure our customers leave with a smile, knowing their vehicle has been expertly serviced and cleaned.
+
 ## Features:
 
 1. User Registration(signUp):
