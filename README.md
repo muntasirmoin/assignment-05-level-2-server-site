@@ -4,11 +4,11 @@
 
 ## Live URL
 
-1. `Live Deployment Link (Client):`
-2. `Live Deployment Link (Server): `
-3. GitHub Repository Client :
-4. GitHub Repository Server :
-5. Project Overview Video :
+1. `Live Deployment Link (Client): [ ] `
+2. `Live Deployment Link (Server): [ ] `
+3. `GitHub Repository Client :[ ] `
+4. `GitHub Repository Server :[ ] `
+5. `Project Overview Video :[ ] `
 
 ## User Login
 
@@ -36,53 +36,20 @@ We envision Wheels Wash as a leader in the vehicle service and wash industry, re
 
 ## Features:
 
-1. User Registration(signUp):
-
-- Route: /api/auth/signup (POST)
-
-2. User login:
-
-- Route: /api/auth/login(POST)
-
-3. Create car wash services:
-
-- Route: /api/services(POST)
-
-4. Get Single Service:
-
-- Route: /api/services/:id(GET)
-
-5. Get All Services:
-
-- Route: /api/services(GET)
-
-6. Update services:
-
-- Route: /api/services/:id(PUT)
-
-7. Delete A Service:
-
-- Route: /api/services/:id(DELETE) [SOFT DELETE ]
-
-8. Create Slots:
-
-- Route: /api/services/slots(POST)
-
-9. Get available slot:
-
-- Route: /api/slots/availability(GET)
-
-10. Book a service:
-
-- Route: /api/bookings(POST)
-
-11. Get all booking:
-
-- Route: /api/bookings(GET)
-
-12. Get Users Booking:
-
-- Route: /api/my-bookings(GET)
+1. User Registration(signUp)!
+2. User login!
+3. Create Wheels wash services1
+4. Get Single Service!
+5. Get All Services!
+6. Update services!
+7. Delete A Service!
+8. Create Slots!
+9. Get available slot!
+10. Book a service!
+11. Get all booking!
+12. Get Users Booking!
+13. Get Upcoming slot!
+14. Get Past Slot!
 
 ## How to set up and use the application locally.
 
@@ -106,8 +73,6 @@ We envision Wheels Wash as a leader in the vehicle service and wash industry, re
 ### - Install devDependencies (if required)
 
 ### SetUp database / Live Deployment Link (Server).
-
-- You can use https://www.postman.com/ to run server.
 
 ### - Start server with command
 
