@@ -24,11 +24,11 @@
 
 - [Service name] [available slot data]
 
-1. [ car ] [16/09/24]
-2. [jeep 4 x 4] [17/09/24]
-3. [ truck ] [18/09/24]
-   ....
-4. [ wheel Pre..] [09/09/24]
+1. car ---------[16/09/24]
+2. jeep 4 x 4---[17/09/24]
+3. truck--------[18/09/24]
+   `------ `
+4. wheel Pre----[09/09/24]
 
 ## Introduction
 
