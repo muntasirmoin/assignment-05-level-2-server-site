@@ -20,6 +20,16 @@
 - email: admin@gmail.com
 - password: admin
 
+## Service details page To get available slot select date :
+
+- [Service name] [available slot data]
+
+1. [ car ] [16/09/24]
+2. [jeep 4 x 4] [17/09/24]
+3. [ truck ] [18/09/24]
+   ....
+4. [ wheel Pre..] [09/09/24]
+
 ## Introduction
 
 Welcome to Wheels Wash! We are your trusted partner for comprehensive vehicle service and wash solutions. At Wheels Wash, we understand the importance of maintaining your vehicle's cleanliness and performance. Our goal is to provide top-quality services that keep your vehicle in pristine condition.
